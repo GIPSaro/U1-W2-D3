@@ -223,7 +223,7 @@ if (crewMass < 500) {
   console.log("Ship is half loaded");
 } else if (crewMass > 700 && crewMass < 900) {
   console.log("Warning: Load is over 700");
-} else if (crewMass > 900 && crewMass < 100) {
+} else if (crewMass > 900 && crewMass < 1000) {
   console.log("Critical Load: Over 900");
 } else if (crewMass > 1000) {
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!");
