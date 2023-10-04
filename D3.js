@@ -130,21 +130,13 @@ console.log(characters.join(","));
 let ESERCIZIO3 = "ESERCIZIO 3";
 console.log(ESERCIZIO3);
 
-femaleCharacters = [];
-for (let i = 0; i < starWarsCharacters.length; i++);
-{
-  if (starWarsCharacters[i].gender === "female") {
-    femaleCharacters.push(starWarsCharacters[i]);
+let femaleCharacters = [];
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  const femaleCharact = starWarsCharacters[i];
+  if (femaleCharact.gender === "female") {
+    femaleCharacters.push(femaleCharact);
   }
 }
-/*
-if (starWarsCharacters[i].gender !== "male") {
-  console.log(starWarsCharacters[i].gender);
-} else if (starWarsCharacters[i].gender !== "n/a") {
-  console.log(starWarsCharacters[i].gender);
-} else {
-  console.log(starWarsCharacters[i].gender);*/
-
 console.log(femaleCharacters);
 
 /* ESERCIZIO 4
@@ -168,26 +160,51 @@ console.log(eyeColor);
 */
 ESERCIZIO5 = "ESERCIZIO5";
 console.log(ESERCIZIO5);
-/* switch (eyeColor) {
-  case "blue"
-  console.log()
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  switch (starWarsCharacters[i].eye_color) {
+    case "blue":
+      eyeColor.blue.push(starWarsCharacters[i]);
+
+      break;
+    case "yellow":
+      eyeColor.yellow.push(starWarsCharacters[i]);
+      break;
+    case "red":
+      eyeColor.red.push(starWarsCharacters[i]);
+      break;
+    case "brown":
+      eyeColor.brown.push(starWarsCharacters[i]);
+      break;
+    case "blue-gray":
+      eyeColor["blue-gray"].push(starWarsCharacters[i]);
+      break;
+  }
 }
+console.log(eyeColor);
+
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
 ESERCIZIO6 = "ESERCIZIO6";
 console.log(ESERCIZIO6);
-let crewMass = [];
+/*let crewMass = [];
 for (let i = 0; i < starWarsCharacters.length; i++) {
   const newObj = {
     crewmass: +starWarsCharacters[i].mass
   };
 
   console.log("IL TOTALE DELL'EQUIPAGGIO è:", +crewMass);
+}*/
+let num = 0;
+let crewMass = 0;
+while (num < starWarsCharacters.length) {
+  let characterMass = starWarsCharacters[num].mass;
+  crewMass = crewMass + characterMass;
+  num++;
 }
-
+console.log(crewMass);
 /* ESERCIZIO 7
-  Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
+Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
 
   Se la massa è inferiore a 500 stampa in console: "Ship is under loaded"
   Se la massa è superiore a 500 stampa in console: "Ship is half loaded"
@@ -197,6 +214,8 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
+ESERCIZIO7 = "ESERCIZIO7";
+console.log(ESERCIZIO7);
 
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
